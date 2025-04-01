@@ -16,8 +16,48 @@ public class Account {
     @Column(unique = true)
     private String number;
     private String agency;
-    @Column(precision = 2, scale = 13)
+    @Column(precision = 14, scale = 3)
     private BigDecimal balance;
     @Column(name = "account_limit", precision = 14, scale = 2)
     private BigDecimal limit;
+
+    public String getNumber() {
+        return number;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getAgency() {
+        return agency;
+    }
+
+    public void setAgency(String agency) {
+        this.agency = agency;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    public BigDecimal getLimit() {
+        return limit;
+    }
+
+    public void setLimit(BigDecimal limit) {
+        this.limit = limit;
+    }
 }

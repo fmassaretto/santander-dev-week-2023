@@ -18,7 +18,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(length = 50)
     private String name;
@@ -31,11 +31,15 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,10 +49,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Account getAccount() {
-        return account;
     }
 
     public void setAccount(Account account) {
