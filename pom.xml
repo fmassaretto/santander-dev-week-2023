@@ -67,6 +67,24 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<!-- Here come other details
+                ...
+                -->
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.fabio.santander_dev_week_2023.SantanderDevWeek2023Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<!-- Here come other details
+                ...
+                -->
+			</plugin>
 		</plugins>
 	</build>
 
